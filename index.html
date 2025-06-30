@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <title>Marthe Caeyers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Libertinus Math', serif;
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
+      background: white;
       color: #333;
     }
 
@@ -41,25 +42,34 @@
       padding: 40px 20px;
     }
 
-    .card {
-      flex: 0 1 200px;
-      height: 150px;
-      border-radius: 0px;
-      color: white;
+    .polaroid {
+      background-color: white;
+      width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1em;
-      font-weight: bold;
-      text-align: center;
+      flex-direction: column;
     }
 
-    .card:nth-child(1) { background-color: #03976f; }
-    .card:nth-child(2) { background-color: #86abbe; }
-    .card:nth-child(3) { background-color: #e3ff24; color: #333; }
-    .card:nth-child(4) { background-color: #bf91c5; }
+    .polaroid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
 
-    /* 📱 Responsive voor gsm */
+    .caption {
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+    }
+
+    .color1 .caption { background-color: #03976f; }
+    .color2 .caption { background-color: #86abbe; }
+    .color3 .caption { background-color: #e3ff24; color: #333; }
+    .color4 .caption { background-color: #bf91c5; }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
@@ -70,11 +80,13 @@
         padding: 0 15px 30px;
       }
 
-      .card {
+      .polaroid {
         width: 100%;
         max-width: 300px;
-        height: 120px;
-        font-size: 1em;
+      }
+
+      .polaroid img {
+        height: 140px;
       }
     }
   </style>
@@ -92,10 +104,25 @@
   </section>
 
   <section class="cards">
-    <div class="card">Strategisch inzicht</div>
-    <div class="card">Sociaal engagement</div>
-    <div class="card">Economie & recht</div>
-    <div class="card">Toekomstvisie</div>
+    <div class="polaroid color1">
+      <img src="https://via.placeholder.com/300x200.png?text=Beleid" alt="Beleid">
+      <div class="caption">Waarom sociaal beleid geen zwakte is</div>
+    </div>
+
+    <div class="polaroid color2">
+      <img src="https://via.placeholder.com/300x200.png?text=Toekomst" alt="Toekomst">
+      <div class="caption">België in 2040: mijn visie</div>
+    </div>
+
+    <div class="polaroid color3">
+      <img src="https://via.placeholder.com/300x200.png?text=Economie" alt="Economie">
+      <div class="caption">Een economie die ook vangt</div>
+    </div>
+
+    <div class="polaroid color4">
+      <img src="https://via.placeholder.com/300x200.png?text=Leiderschap" alt="Leiderschap">
+      <div class="caption">Vastberaden leiderschap in onzekere tijden</div>
+    </div>
   </section>
 
 </body>
