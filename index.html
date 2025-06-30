@@ -31,7 +31,7 @@
       padding: 0 20px 40px;
       font-size: 1.2em;
       line-height: 1.6;
-      text-align: left; /* hier aangepast */
+      text-align: left;
     }
 
     .cards {
@@ -48,7 +48,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       border: none;
     }
 
@@ -60,11 +59,11 @@
       justify-content: flex-start;
       padding: 8px;
       box-sizing: border-box;
+      height: 100%;
     }
 
     .polaroid img {
       width: 100%;
-      height: auto;
       aspect-ratio: 1/1;
       object-fit: cover;
       border: none;
@@ -85,24 +84,32 @@
     .color3 { background-color: #e3ff24; color: #333; }
     .color4 { background-color: #bf91c5; }
 
+    .load-more {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .load-more a {
+      font-size: 1em;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
-
-      .bio {
-        font-size: 1em;
-        padding: 0 15px 30px;
-      }
-
       .polaroid {
         width: 100%;
-        max-width: 200px;
+        max-width: none;
         height: auto;
       }
 
+      .polaroid-inner {
+        padding: 16px;
+      }
+
       .polaroid img {
-        height: 140px;
+        width: 100%;
+        height: auto;
       }
     }
   </style>
@@ -148,6 +155,10 @@
       </div>
     </div>
   </section>
+
+  <div class="load-more">
+    <a href="#">meer laden</a>
+  </div>
 
 </body>
 </html>
