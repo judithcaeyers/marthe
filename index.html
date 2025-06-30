@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Marthe Caeyers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,14 +35,14 @@
 
     .cards {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
       padding: 40px 20px;
     }
 
     .card {
-      width: 200px;
+      flex: 0 1 200px;
       height: 150px;
       border-radius: 12px;
       color: white;
@@ -57,6 +58,25 @@
     .card:nth-child(2) { background-color: #86abbe; }
     .card:nth-child(3) { background-color: #e3ff24; color: #333; }
     .card:nth-child(4) { background-color: #bf91c5; }
+
+    /* 📱 Responsive voor gsm */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .bio {
+        font-size: 1em;
+        padding: 0 15px 30px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+        height: 120px;
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
