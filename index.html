@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Marthe Caeyers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Lato:wght@700&display=swap" rel="stylesheet">
-
   <style>
+    /* Algemene stijl */
     body {
       font-family: 'Libertinus Math', serif;
       margin: 0;
@@ -16,6 +16,7 @@
       color: #333;
     }
 
+    /* Navigatie & titel */
     header {
       background-color: #fff;
       padding: 20px;
@@ -42,6 +43,7 @@
       letter-spacing: 0.5px;
     }
 
+    /* Intro */
     .bio {
       max-width: 800px;
       margin: 0 auto;
@@ -51,6 +53,7 @@
       text-align: left;
     }
 
+    /* Kaarten */
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -88,10 +91,10 @@
     }
 
     .caption {
-      padding: 10px 8px;
-      font-weight: bold;
+      padding: 16px 10px;
+      font-weight: 700;
       text-align: center;
-      font-size: 0.9em;
+      font-size: 1.1em;
       flex-shrink: 0;
       color: white;
     }
@@ -101,6 +104,7 @@
     .color3 { background-color: #e3ff24; color: #333; }
     .color4 { background-color: #bf91c5; }
 
+    /* Meer laden */
     .load-more {
       text-align: center;
       padding: 20px;
@@ -113,6 +117,12 @@
       cursor: pointer;
     }
 
+    /* Verbergen */
+    .hidden {
+      display: none;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
       .polaroid {
         width: 100%;
@@ -127,6 +137,15 @@
       .polaroid img {
         width: 100%;
         height: auto;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .bio {
+        font-size: 1em;
+        padding: 0 15px 30px;
       }
     }
   </style>
@@ -149,10 +168,11 @@
   </section>
 
   <section class="cards" id="artikels">
+    <!-- Originele 4 kaartjes -->
     <div class="polaroid color1">
       <div class="polaroid-inner">
         <img src="https://via.placeholder.com/300x300.png?text=Beleid" alt="Beleid">
-        <div class="caption">Waarom sociaal beleid geen zwakte is</div>
+        <div class="caption">Wat we kunnen leren van nonnen.</div>
       </div>
     </div>
 
@@ -166,7 +186,7 @@
     <div class="polaroid color3">
       <div class="polaroid-inner">
         <img src="https://via.placeholder.com/300x300.png?text=Economie" alt="Economie">
-        <div class="caption">Een economie die ook vangt</div>
+        <div class="caption">Innovatie als drijver van de economie.</div>
       </div>
     </div>
 
@@ -177,18 +197,74 @@
       </div>
     </div>
 
-    <div class="extra-cards" style="display: none;">
-      <div class="polaroid color1">
-        <div class="polaroid-inner">
-          <img src="https://via.placeholder.com/300x300.png?text=Engagement" alt="Engagement">
-          <div class="caption">Van luisteren naar leiden</div>
-        </div>
+    <!-- 10 extra kaartjes met .extra-card.hidden -->
+    <div class="extra-card hidden polaroid color1">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Vastgoed" alt="Vastgoed">
+        <div class="caption">Wonen in 2030: kinderen grootbrengen samen met je buren.</div>
       </div>
-      <div class="polaroid color2">
-        <div class="polaroid-inner">
-          <img src="https://via.placeholder.com/300x300.png?text=Milieu" alt="Milieu">
-          <div class="caption">Groei en groen kunnen samen</div>
-        </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color2">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Stemmen" alt="Stemmen">
+        <div class="caption">Waarom ik jong blijf stemmen</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color3">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Energie" alt="Energie">
+        <div class="caption">Energiezekerheid zonder extra facturen</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color4">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Kansrijk" alt="Kansrijk">
+        <div class="caption">Van kwetsbaar naar kansrijk: hoe dan?</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color1">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Balans" alt="Balans">
+        <div class="caption">Werk-privé: politiek mag ook menselijk zijn</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color2">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Inclusie" alt="Inclusie">
+        <div class="caption">Carboncapture?</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color3">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Onderwijs" alt="Onderwijs">
+        <div class="caption">Slimmer beleid begint op de schoolbanken</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color4">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Zorg" alt="Zorg">
+        <div class="caption">Zorg mag niet afhangen van je postcode</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color1">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Ruimte" alt="Ruimte">
+        <div class="caption">Meer ruimte voor wie geen ruimte heeft</div>
+      </div>
+    </div>
+
+    <div class="extra-card hidden polaroid color2">
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Data" alt="Data">
+        <div class="caption">Wat gebeurt er met jouw data, echt?</div>
       </div>
     </div>
   </section>
@@ -204,11 +280,19 @@
   </section>
 
   <script>
-    document.getElementById("loadMoreBtn").addEventListener("click", function(e) {
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    const extraCards = document.querySelectorAll(".extra-card.hidden");
+    let currentIndex = 0;
+    const cardsPerClick = 3;
+
+    loadMoreBtn.addEventListener("click", function(e) {
       e.preventDefault();
-      const extraCards = document.querySelector(".extra-cards");
-      extraCards.style.display = "flex";
-      this.style.display = "none";
+      const cardsToShow = Array.from(extraCards).slice(currentIndex, currentIndex + cardsPerClick);
+      cardsToShow.forEach(card => card.classList.remove("hidden"));
+      currentIndex += cardsPerClick;
+      if (currentIndex >= extraCards.length) {
+        loadMoreBtn.style.display = "none";
+      }
     });
   </script>
 
