@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>Marthe Caeyers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Lato:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Libertinus Math', serif;
@@ -16,13 +18,28 @@
 
     header {
       background-color: #fff;
-      padding: 60px 20px 20px;
+      padding: 20px;
       text-align: center;
     }
 
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+    .nav {
+      margin-bottom: 20px;
+    }
+
+    .nav a {
+      margin: 0 15px;
+      text-decoration: underline;
+      color: #333;
+      font-size: 1em;
+      font-family: 'Libertinus Math', serif;
+    }
+
+    .title {
+      font-family: 'Lato', sans-serif;
+      font-size: 2.8em;
+      text-transform: uppercase;
+      margin: 10px 0 30px;
+      letter-spacing: 0.5px;
     }
 
     .bio {
@@ -117,16 +134,21 @@
 <body>
 
   <header>
-    <h1>Marthe Caeyers</h1>
+    <nav class="nav">
+      <a href="#hallo">Hallo</a>
+      <a href="#contact">Contact</a>
+      <a href="#artikels">Artikels</a>
+    </nav>
+    <h1 class="title">Marthe Caeyers</h1>
   </header>
 
-  <section class="bio">
+  <section class="bio" id="hallo">
     <p>
       Marthe Caeyers (°1998) is een ambitieuze Belgische politica met een passie voor economische hervorming en sociale rechtvaardigheid. Ze combineert een stevige achtergrond in fiscaal recht met visie, strategie en engagement. Haar missie? Van België een plek maken waar ondernemen veilig durven springen betekent.
     </p>
   </section>
 
-  <section class="cards">
+  <section class="cards" id="artikels">
     <div class="polaroid color1">
       <div class="polaroid-inner">
         <img src="https://via.placeholder.com/300x300.png?text=Beleid" alt="Beleid">
@@ -154,11 +176,41 @@
         <div class="caption">Vastberaden leiderschap in onzekere tijden</div>
       </div>
     </div>
+
+    <div class="extra-cards" style="display: none;">
+      <div class="polaroid color1">
+        <div class="polaroid-inner">
+          <img src="https://via.placeholder.com/300x300.png?text=Engagement" alt="Engagement">
+          <div class="caption">Van luisteren naar leiden</div>
+        </div>
+      </div>
+      <div class="polaroid color2">
+        <div class="polaroid-inner">
+          <img src="https://via.placeholder.com/300x300.png?text=Milieu" alt="Milieu">
+          <div class="caption">Groei en groen kunnen samen</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <div class="load-more">
-    <a href="#">meer laden</a>
+    <a href="#" id="loadMoreBtn">meer laden</a>
   </div>
+
+  <section id="contact" class="bio">
+    <p>
+      Wil je iets vragen of samenwerken? Je mag me altijd mailen op <a href="mailto:marthe@example.com">marthe@example.com</a>.
+    </p>
+  </section>
+
+  <script>
+    document.getElementById("loadMoreBtn").addEventListener("click", function(e) {
+      e.preventDefault();
+      const extraCards = document.querySelector(".extra-cards");
+      extraCards.style.display = "flex";
+      this.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
