@@ -31,7 +31,7 @@
       padding: 0 20px 40px;
       font-size: 1.2em;
       line-height: 1.6;
-      text-align: center;
+      text-align: left; /* hier aangepast */
     }
 
     .cards {
@@ -43,32 +43,47 @@
     }
 
     .polaroid {
-      background-color: white;
-      width: 220px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      overflow: hidden;
+      width: 160px;
+      height: 254px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border: none;
+    }
+
+    .polaroid-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 8px;
+      box-sizing: border-box;
     }
 
     .polaroid img {
       width: 100%;
-      height: 160px;
+      height: auto;
+      aspect-ratio: 1/1;
       object-fit: cover;
+      border: none;
+      margin-bottom: 8px;
     }
 
     .caption {
-      padding: 10px;
+      padding: 10px 8px;
       font-weight: bold;
       text-align: center;
+      font-size: 0.9em;
+      flex-shrink: 0;
       color: white;
     }
 
-    .color1 .caption { background-color: #03976f; }
-    .color2 .caption { background-color: #86abbe; }
-    .color3 .caption { background-color: #e3ff24; color: #333; }
-    .color4 .caption { background-color: #bf91c5; }
+    .color1 { background-color: #03976f; }
+    .color2 { background-color: #86abbe; }
+    .color3 { background-color: #e3ff24; color: #333; }
+    .color4 { background-color: #bf91c5; }
 
     @media (max-width: 600px) {
       header h1 {
@@ -82,7 +97,8 @@
 
       .polaroid {
         width: 100%;
-        max-width: 300px;
+        max-width: 200px;
+        height: auto;
       }
 
       .polaroid img {
@@ -105,23 +121,31 @@
 
   <section class="cards">
     <div class="polaroid color1">
-      <img src="https://via.placeholder.com/300x200.png?text=Beleid" alt="Beleid">
-      <div class="caption">Waarom sociaal beleid geen zwakte is</div>
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Beleid" alt="Beleid">
+        <div class="caption">Waarom sociaal beleid geen zwakte is</div>
+      </div>
     </div>
 
     <div class="polaroid color2">
-      <img src="https://via.placeholder.com/300x200.png?text=Toekomst" alt="Toekomst">
-      <div class="caption">België in 2040: mijn visie</div>
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Toekomst" alt="Toekomst">
+        <div class="caption">België in 2040: mijn visie</div>
+      </div>
     </div>
 
     <div class="polaroid color3">
-      <img src="https://via.placeholder.com/300x200.png?text=Economie" alt="Economie">
-      <div class="caption">Een economie die ook vangt</div>
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Economie" alt="Economie">
+        <div class="caption">Een economie die ook vangt</div>
+      </div>
     </div>
 
     <div class="polaroid color4">
-      <img src="https://via.placeholder.com/300x200.png?text=Leiderschap" alt="Leiderschap">
-      <div class="caption">Vastberaden leiderschap in onzekere tijden</div>
+      <div class="polaroid-inner">
+        <img src="https://via.placeholder.com/300x300.png?text=Leiderschap" alt="Leiderschap">
+        <div class="caption">Vastberaden leiderschap in onzekere tijden</div>
+      </div>
     </div>
   </section>
 
