@@ -2,15 +2,81 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Marth's eerste website</title>
+  <title>Marthe Caeyers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .bio {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      width: 200px;
+      height: 150px;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .card:nth-child(1) { background-color: #03976f; }
+    .card:nth-child(2) { background-color: #86abbe; }
+    .card:nth-child(3) { background-color: #e3ff24; color: #333; }
+    .card:nth-child(4) { background-color: #bf91c5; }
+  </style>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <p>Welkom op mijn allereerste webpagina.</p>
-  <p>Marthe Caeyers (°1998) is een gedreven Belgische politica en beleidsbeïnvloeder, bekend om haar strategisch inzicht, vastberadenheid en maatschappelijke betrokkenheid. Na haar studies fiscaal recht maakte ze naam als consultant bij Deloitte, waar ze complexiteit en nuance hoog in het vaandel droeg. Haar scherpe analytische vaardigheden en doorzettingskracht leidde ertoe dat ze de overstap maakte naar de politiek, eerst als parlementair assistente in het Europees Parlement.
 
-Marthe combineert diepgaande kennis van fiscale en economische beleidsdomeinen met een passie voor sociale rechtvaardigheid. Ze profileert zich als een bruggenbouwer tussen liberale economische principes en een progressieve agenda, met speciale aandacht voor gendergelijkheid, digitalisering en duurzame groei. Als jonge politica weet ze moeiteloos complexe dossiers te doorgronden en strategische allianties te smeden.
+  <header>
+    <h1>Marthe Caeyers</h1>
+  </header>
 
-Met oog voor zowel regionaal als Europees beleid zet Marthe zich in voor kansencreatie, transparantie en toekomstgericht leiderschap. Haar ambitie? België mee vormgeven als een innovatieve, eerlijke en veerkrachtige samenleving. Een economie die kansen schept én opvangt – waar ondernemen geen sprong in het duister is, maar een sprong met een vangnet.Volgende stap: een electoraal mandaat, waarin ze vanuit het hart van de macht haar visie verder kan realiseren.</p>
+  <section class="bio">
+    <p>
+      Marthe Caeyers (°1998) is een ambitieuze Belgische politica met een passie voor economische hervorming en sociale rechtvaardigheid. Ze combineert een stevige achtergrond in fiscaal recht met visie, strategie en engagement. Haar missie? Van België een plek maken waar ondernemen veilig durven springen betekent.
+    </p>
+  </section>
+
+  <section class="cards">
+    <div class="card">Strategisch inzicht</div>
+    <div class="card">Sociaal engagement</div>
+    <div class="card">Economie & recht</div>
+    <div class="card">Toekomstvisie</div>
+  </section>
+
 </body>
 </html>
