@@ -4,33 +4,35 @@
   <meta charset="UTF-8" />
   <title>Marthe Caeyers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #e3ff24;
-      font-family: 'EB Garamond', serif; /* standaard voor tekst/knoppen */
+      font-family: 'EB Garamond', serif;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     h1.background-text {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-family: 'Roboto', sans-serif;
-      font-size: 7em;
+      font-size: 10vw;
+      color: white;
       text-transform: uppercase;
-      color: rgba(0, 0, 0, 0.1);
       z-index: 0;
-      white-space: nowrap;
+      white-space: pre-line;
+      line-height: 1.1;
       pointer-events: none;
     }
 
@@ -55,9 +57,22 @@
       background: rgba(0, 0, 0, 0.05);
     }
 
+    .footer-text {
+      z-index: 1;
+      margin-top: 40px;
+      font-size: 1em;
+      color: black;
+      font-family: 'EB Garamond', serif;
+    }
+
+    .footer-text a {
+      color: black;
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
       h1.background-text {
-        font-size: 4em;
+        font-size: 14vw;
       }
 
       .button-container {
@@ -69,17 +84,27 @@
         font-size: 1.2em;
         padding: 8px 16px;
       }
+
+      .footer-text {
+        font-size: 0.9em;
+        padding: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1 class="background-text">Hallo, ik ben Marthe</h1>
+  <h1 class="background-text">Hallo,\nik ben Marthe</h1>
 
   <div class="button-container">
     <a href="pagina's/dromer.html">Dromer</a>
     <a href="pagina's/realist.html">Realist</a>
   </div>
+
+  <p class="footer-text">
+    Wil je meer weten? Vragen? Gewoon eens zin in een koffietje?<br>
+    Mail me op <a href="mailto:marthecaeyers@gmail.com">marthecaeyers@gmail.com</a>
+  </p>
 
 </body>
 </html>
