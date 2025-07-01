@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Realist – Marthe Caeyers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #86abbe; /* Blauw achtergrond */
+      font-family: 'Libertinus Math', serif;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .card {
+      display: flex;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #666;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: white;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .card-text {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-text h2 {
+      margin: 0 0 10px;
+      font-size: 1.3em;
+    }
+
+    .card-text p {
+      margin: 0;
+      line-height: 1.5;
+      font-size: 1em;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+      }
+
+      .card-text {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Realist</h1>
+
+  <div class="card-list">
+    <a href="#" class="card">
+      <img src="https://via.placeholder.com/300x300?text=Begroting" alt="Begroting">
+      <div class="card-text">
+        <h2>Waar komt het geld vandaan?</h2>
+        <p>Een eerlijk beleid begint bij duidelijke keuzes over middelen en prioriteiten.</p>
+      </div>
+    </a>
+
+    <a href="#" class="card">
+      <img src="https://via.placeholder.com/300x300?text=Wonen" alt="Wonen">
+      <div class="card-text">
+        <h2>Betaalbaar wonen is geen utopie</h2>
+        <p>Concrete oplossingen voor woningen die wél toegankelijk zijn voor iedereen.</p>
+      </div>
+    </a>
+
+    <a href="#" class="card">
+      <img src="https://via.placeholder.com/300x300?text=Werk" alt="Werk">
+      <div class="card-text">
+        <h2>Meer mensen aan de slag</h2>
+        <p>Hoe we structureel werken aantrekkelijker en haalbaarder kunnen maken.</p>
+      </div>
+    </a>
+  </div>
+
+</body>
+</html>
 
