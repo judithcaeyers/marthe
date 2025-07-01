@@ -10,7 +10,6 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #e3ff24;
       font-family: 'EB Garamond', serif;
     }
 
@@ -112,9 +111,23 @@
   <span class="footer-links">
     <a href="mailto:marthecaeyers@gmail.com">Mail</a> &nbsp;&middot;&nbsp;
     <a href="pagina's/bio.html">Bio</a> &nbsp;&middot;&nbsp;
-    <a href="../index.html">Home</a>
+    <a href="../index.html">Start</a>
   </span>
 </p>
+
+<script>
+  const kleuren = [
+    '#e3ff24', // pittig groen
+    '#e7aaff', // lavender
+    '#f886fc', // pittig roze
+    '#ff6f0e', // oranje
+    '#fcdb86', // lichtoranje
+    '#f9d41b', // geel
+    '#cadfeb'  // lichtblauw
+  ];
+  const randomKleur = kleuren[Math.floor(Math.random() * kleuren.length)];
+  document.body.style.backgroundColor = randomKleur;
+</script>
 
 
 </body>
