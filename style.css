@@ -165,3 +165,11 @@ header {
   color: #555;
 }
 
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto 60px auto; /* extra ruimte onder de lijst */
+}
+
