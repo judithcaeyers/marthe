@@ -146,20 +146,22 @@ header {
 
 .footer-text {
   font-family: 'EB Garamond', serif;
-  font-size: 1.1em;
+  font-size: 0.95em;  /* Iets kleiner */
   color: black;
   text-align: center;
-  margin: 40px 20px;
-  line-height: 1.5;
+  margin: 30px 20px;
+  line-height: 1.4;
 }
 
 .footer-links a {
   color: black;
   text-decoration: underline;
   font-style: italic;
+  font-size: 0.9em;  /* Ook iets kleiner */
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #555;
 }
+
