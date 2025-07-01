@@ -25,4 +25,57 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 4em;
-      col
+      color: rgba(0, 0, 0, 0.1);
+      z-index: 0;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 40px;
+      z-index: 1;
+    }
+
+    .button-container a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      border: 1px solid black;
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+
+    .button-container a:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      h1.background-text {
+        font-size: 2.5em;
+      }
+
+      .button-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .button-container a {
+        font-size: 1.2em;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="background-text">Hallo, ik ben Marthe</h1>
+
+  <div class="button-container">
+    <a href="pagina's/dromer.html">Dromer</a>
+    <a href="pagina's/realist.html">Realist</a>
+  </div>
+
+</body>
+</html>
